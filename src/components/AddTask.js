@@ -17,7 +17,7 @@ class AddTask extends Component {
     render() {
         return (
             <div>
-                <ToDoForm onSubmit={this.addTask} buttonText="Add" />
+                <ToDoForm onSubmit={this.addTask} buttonText="Add" header="Add a Task" />
             </div>
         );
     }

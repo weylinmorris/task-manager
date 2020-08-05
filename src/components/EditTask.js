@@ -17,7 +17,7 @@ class EditTask extends Component {
     render() {
         return (
             <div>
-                <ToDoForm { ...this.props.item } onSubmit={this.editTask} buttonText="Edit" />
+                <ToDoForm { ...this.props.item } onSubmit={this.editTask} buttonText="Edit" header="Edit This Task" />
             </div>
         );
     }

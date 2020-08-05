@@ -1,7 +1,7 @@
 .toDoList-container {
-    width: 800px;
     margin: 50px auto;
     max-width: 90vw;
+    width: 800px;
 }
 
 .toDoList-header {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SingleDatePicker } from 'react-dates'
 import moment from 'moment'
 import 'react-dates/lib/css/_datepicker.css'
+import styles from '../styles/task-form.css'
 
 class ToDoForm extends Component {
     constructor(props) {
@@ -42,18 +43,10 @@ class ToDoForm extends Component {
 
     render() {
         return (
-            <div>
-                { this.state.formError && <p>{ this.state.formError }</p> }
+            <div className="toDoForm-container">
+                <h1>{ this.props.header }</h1>
+                { this.state.formError && <p className="form-error">{ this.state.formError }</p> }
                 <form onSubmit={this.onSubmit}>
-                    <label htmlFor="due-date">Due Date</label>
-                    <SingleDatePicker
-                        date={ this.state.dueDate }
-                        onDateChange={this.onDateChange}
-                        focused={this.state.calendarFocused}
-                        onFocusChange={this.onFocusChange}
-                        numberOfMonths={ 1 }
-                        isOutsideRange={ () => false }
-                    />
                     <label htmlFor="title">Title</label>
                     <input 
                         type="text" 
@@ -64,7 +57,16 @@ class ToDoForm extends Component {
                             this.setState(() => ({ title }))
                         }}
                     />
-                    <button>{this.props.buttonText}</button>
+                    <label htmlFor="due-date">Due Date</label>
+                    <SingleDatePicker
+                        date={ this.state.dueDate }
+                        onDateChange={this.onDateChange}
+                        focused={this.state.calendarFocused}
+                        onFocusChange={this.onFocusChange}
+                        numberOfMonths={ 1 }
+                        isOutsideRange={ () => false }
+                    />
+                    <button className="submit">{this.props.buttonText}</button>
                 </form>
             </div>
         );
