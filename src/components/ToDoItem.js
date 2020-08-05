@@ -12,7 +12,7 @@ class ToDoItem extends Component {
                 <button
                     onClick={ () => { this.props.dispatch(toggleCompleted(this.props.id)) } }
                     className={ this.props.completed ? 'toDoItem-completed toDoItem-completed-button' : 'toDoItem-not-completed toDoItem-completed-button' }
-                >{ this.props.completed ? '✓' : '' }</button>
+                ><span>{ this.props.completed ? '✓' : '' }</span></button>
                 <div>
                     <h3>{this.props.title}</h3>
                     <p
