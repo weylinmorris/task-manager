@@ -10,7 +10,7 @@ class ToDoList extends Component {
             <div className="toDoList-container">
                 <div className="toDoList-header">
                     <h1>To Do List</h1>
-                    <Link className="toDoList-add-task" to="/create">{this.props.items.length == 0 ? 'Get started by adding a new task! ' : 'Add a Task ' }</Link>
+                    <Link className="toDoList-add-task" to="/create">{this.props.items.length == 0 ? 'Add your first task!' : 'Add a Task' }</Link>
                 </div>
                 {
                     this.props.items.map((task, index) => {
