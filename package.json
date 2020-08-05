@@ -9,7 +9,7 @@
     "start": "node src/server.js",
     "graph": "git log --oneline --decorate --all --graph",
     "build:prod": "webpack -p",
-    "deploy": "webpack -p && git add . && git commit -m 'Bundled for deployment' && git push heroku"
+    "deploy": "webpack -p && git add . && git commit -m 'Bundled for deployment' && git push heroku master"
   },
   "keywords": [],
   "author": "",
