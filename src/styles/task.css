@@ -1,0 +1,85 @@
+.toDoItem-container {
+    align-items: center;
+    border-top: 1px solid lightgray;
+    display: flex;
+    font-family: sans-serif;
+    padding: 20px;
+    width: 100%;
+    transition: 250ms;
+}
+
+/* .toDoItem-container:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transform: scale(1.001);
+    transition: 250ms;
+} */
+
+.toDoItem-container * {
+    color: rgb(100, 100, 100);
+}
+
+.toDoItem-completed-button {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 1.5rem;
+    margin-right: 20px;
+    width: 1.5rem;
+}
+
+.toDoItem-completed-button:hover {
+    cursor: pointer;
+}
+
+.toDoItem-completed-button:focus {
+    outline: none;
+}
+
+.toDoItem-completed {
+    color: gray;
+    font-size: 2rem;
+    line-height: 0;
+    padding-bottom: 7px;
+    padding-left: 1px;
+}
+
+.toDoItem-container h3 {
+    color: black;
+    margin-right: 20px;
+}
+
+.toDoItem-date {
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.toDoItem-date-previous-day {
+    color: red;
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.toDoItem-date-same-day {
+    font-size: 0.9rem;
+    margin-right: 20px;
+}
+
+.toDoItem-note {
+    margin-right: 20px;
+}
+
+.toDoItem-edit {
+    margin-left: auto;
+}
+
+.toDoItem-delete {
+    background-color: white;
+    border: 2px solid rgb(197, 12, 12);
+    border-radius: 5px;
+    color: rgb(197, 12, 12);
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 5px 8px;
+}
